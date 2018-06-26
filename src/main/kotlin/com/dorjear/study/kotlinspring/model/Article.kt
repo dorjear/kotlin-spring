@@ -11,9 +11,9 @@ data class Article (
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long = 0,
 
-        @NotBlank
+        @get: NotBlank
         val title: String = "",
 
-        @NotBlank
+        @get: NotBlank
         val content: String = ""
 )
