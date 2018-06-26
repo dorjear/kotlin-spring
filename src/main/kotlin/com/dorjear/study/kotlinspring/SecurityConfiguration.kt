@@ -23,8 +23,7 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
         http.authorizeRequests()
                 .antMatchers("/**").hasRole("USER")
                 .and()
-                .cors()
-                .and()
+                .cors().disable().csrf().disable()
                 .httpBasic()
     }
 
