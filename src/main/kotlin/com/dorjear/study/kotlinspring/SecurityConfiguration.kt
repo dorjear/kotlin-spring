@@ -14,7 +14,7 @@ class SecurityConfiguration : WebSecurityConfigurerAdapter() {
     @Bean
     fun inMemoryUserDetailsManager(): InMemoryUserDetailsManager {
         return InMemoryUserDetailsManager(
-                User.withUsername("xiulaba").password("{noop}diulama")
+                User.withUsername("xiulaba").password("{SHA-256}3ba2af66cede23c2552b84f7e0d74f545fa3149be9b5406e1ec1e8ff83d80a52")
                         .authorities("ROLE_USER").build())
     }
 
